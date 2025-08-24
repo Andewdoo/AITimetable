@@ -1,0 +1,56 @@
+@import url(https://fonts.google.com/specimen/Italiana?query=modern&categoryFilters=Sans+Serif:%2FSans%2F*);
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: sans-serif;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.topbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: sans-serif;
+}
+
+.brandName {
+  font-size: 27px;
+  font-weight: 800;
+  color: black;
+  font-family: 'Italiana', serif; 
+  padding-left: 12px;
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Italiana', serif;
+  flex-shrink: 0;
+  padding-right: 12px;
+}
+
+.icon {
+  width: 42px;
+  cursor: pointer;
+  height: auto;
+}           
+.iconButton {
+  background-color: white !important;
+  background: none !important;     
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+} 
+
+
