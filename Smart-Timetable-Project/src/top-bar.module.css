@@ -46,7 +46,7 @@
   height: auto;
 }           
 .iconButton {
-  background-color: white !important;
+  background-color: transparent !important;
   background: none !important;     
   border: none !important;
   padding: 0 !important;
