@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import TopBar from './top-bar.jsx'  
+import TopBar from './top-bar.jsx' 
+import Carousel from './body.jsx'
+import Landing from './Landing.jsx'
+<body>
+  
+</body>
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +13,8 @@ function App() {
   return (
     <>
     <TopBar />
+    <Landing />
+    <Carousel />
     </>
   )
 }
