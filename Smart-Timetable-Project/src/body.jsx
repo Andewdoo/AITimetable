@@ -14,21 +14,36 @@ function Carousel() {
   const cards = [
     {
       img: '/Timetable.jpg',
-      title: 'Create Timetable',
-      description: 'Easily create and manage your timetables.',
-      backText: 'Plan your week efficiently with our smart scheduling tools.',
+      title: 'AI Smart Scheduling',
+      description: 'Let AI optimize your weekly schedule based on your tasks and deadlines.',
+      backText: 
+      <ul>
+        <li>Save time and reduce stress with intelligent planning.</li>
+        <li>Customizable to fit your unique needs and preferences.</li>
+        <li>Ensures important tasks are scheduled first</li>
+      </ul>
     },
     {
       img: '/share.jpg',
-      title: 'Share with Friends',
-      description: 'Share your timetables with friends and collaborate on scheduling.',
-      backText: 'Invite friends and sync your schedules in real time.',
+      title: 'Sync and Share',
+      description: 'Share your timetables with friends and access them from any device.',
+      backText:
+      <ul>
+        <li>Sync your timetable with other devices</li>
+        <li>Collaborate and share schedules with friends or colleagues</li>
+        <li>Access your timetable anytime, anywhere</li>
+      </ul>
     },
     {
       img: '/sync.jpg',
-      title: 'Sync Across Devices',
-      description: 'Access your timetables from any device, anytime, anywhere.',
-      backText: 'Stay updated across mobile, tablet, and desktop.',
+      title: 'Interactive Interface',
+      description: 'Visualize changes in real time with intuative easy to use features.',
+      backText:
+      <ul>
+        <li>Intuitive easy to use interface.</li>
+        <li>Drag and drop tasks to reschedule</li>
+        <li>Real-time updates and notifications</li>
+      </ul>
     },
   ];
 
