@@ -26,13 +26,13 @@ function TopBar() {
         <div className={styles.panelContent}>
           <h1>Menu</h1>
           <ul>
-            <li>Products</li>
             <li>Business Types</li>
             <li>Why Smart Table?</li>
-            <li>Pricing</li>
             <li>Resources</li>
-            <li>Sign In</li>
-            <li>Shop</li>
+            <li>Features</li>
+            <li>Login</li>
+            <li>Sign Up</li>
+            <li>Contact</li>
           </ul>
           <button className={styles.closeButton} onClick={toggleMenu}>Close</button>
         </div>
