@@ -28,6 +28,7 @@
   margin: 16px 0;
   cursor: pointer;
   font-family: 'Italiana', serif;
+  padding: 5px;
 }
 
 .closeButton {
@@ -81,7 +82,7 @@
 }
 
 .topbarRight {
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
 }
 
