@@ -27,7 +27,6 @@ function TopBar() {
           <h1>Menu</h1>
           <ul>
             <li>Why Smart Table?</li>
-            <li>Features</li>
             <li>Login</li>
             <li>Sign Up</li>
             <li>Contact</li>
