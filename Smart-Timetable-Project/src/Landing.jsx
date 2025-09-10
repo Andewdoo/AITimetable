@@ -8,7 +8,9 @@ function Landing() {
         <h2 className={styles.heroHeadline}>
           Let AI plan your week smarter, faster, and stress-free.
         </h2>
+        <a>
         <button className={styles.getStartedButton}>Get Started</button>
+        </a>
       </div>
 
       <div className={styles.messageSection}>
@@ -24,3 +26,4 @@ function Landing() {
 }
 
 export default Landing;
+

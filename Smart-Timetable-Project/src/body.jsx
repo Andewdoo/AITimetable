@@ -15,7 +15,7 @@ function Carousel() {
     {
       img: '/Timetable.jpg',
       title: 'AI Smart Scheduling',
-      description: 'Let AI optimize your weekly schedule based on your tasks and deadlines.',
+      description: 'Let AI optimize your schedule based on your tasks and deadlines.',
       backText: 
       <ul>
         <li>Save time and reduce stress with intelligent planning.</li>
