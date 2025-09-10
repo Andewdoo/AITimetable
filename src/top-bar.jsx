@@ -15,25 +15,34 @@ function TopBar() {
           <span className={styles.brandName}>Smart Table</span>
         </div>
         <div className={styles.topbarRight}>
+          <a href='/login.html'>
           <button className={styles.loginButton}>Login</button>
+          </a>
           <button className={styles.iconButton} onClick={toggleMenu}>
             <img src="/app.png" alt="menu" className={styles.icon} />
           </button>
         </div>
       </header>
-
-      <div className={`${styles.sidePanel} ${menuOpen ? styles.open : ''}`}>
-        <div className={styles.panelContent}>
-          <h1>Menu</h1>
-          <ul>
-            <li>Why Smart Table?</li>
-            <li>Login</li>
-            <li>Sign Up</li>
-            <li>Contact</li>
-          </ul>
-          <button className={styles.closeButton} onClick={toggleMenu}>Close</button>
-        </div>
-      </div>
+<div className={`${styles.sidePanel} ${menuOpen ? styles.open : ''}`}>
+  <div className={styles.panelContent}>
+    <h1>Menu</h1>
+    <div className={styles.menuButtons}>
+      <a href={'/why-smart-table.html'}>
+      <button className={styles.menuButton}>Why Smart Table?</button>
+      </a>
+      <a href={'/login.html'}>
+      <button className={styles.menuButton}>Login</button>
+      </a>
+      <a href={'/signup.html'}>
+      <button className={styles.menuButton}>Sign Up</button>
+      </a>
+      <a href={'/contact.html'}>
+      <button className={styles.menuButton}>Contact</button>
+      </a>
+    </div>
+    <button className={styles.closeButton} onClick={toggleMenu}>Close</button>
+  </div>
+</div>
     </>
   );
 }

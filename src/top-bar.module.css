@@ -39,6 +39,8 @@
   padding: 8px 16px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 20px;
+  font-family: 'Italiana', serif;
 }
 
 .loginButton {
@@ -114,4 +116,26 @@
   margin-top: -30px;
   font-family: 'Italiana', serif;
   color: black;
+}
+.menuButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.menuButton {
+  background: transparent;
+  align-items: center;
+  border: none;
+  font-size: 18px;
+  font-family: 'Italiana', serif;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menuButton:hover {
+  color: rgb(176, 171, 171);
 }
