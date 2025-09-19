@@ -1,13 +1,11 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
 }
 
 body {
   background-color: #d8f3dc;
-  /* overflow-x: hidden; */
   width: 100%;
 }
 

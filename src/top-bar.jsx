@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import styles from './top-bar.module.css';
+import { useNavigate } from 'react-router-dom';
+import LoginPage from './login.jsx';
+
 
 function TopBar() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -30,15 +34,11 @@ function TopBar() {
       <a href={'/why-smart-table.html'}>
       <button className={styles.menuButton}>Why Smart Table?</button>
       </a>
-      <a href={'/login.html'}>
-      <button className={styles.menuButton}>Login</button>
-      </a>
-      <a href={'/signup.html'}>
+      <button className={styles.menuButton}
+       onClick={() => navigate('/login')}>Login
+       </button>
       <button className={styles.menuButton}>Sign Up</button>
-      </a>
-      <a href={'/contact.html'}>
       <button className={styles.menuButton}>Contact</button>
-      </a>
     </div>
     <button className={styles.closeButton} onClick={toggleMenu}>Close</button>
   </div>

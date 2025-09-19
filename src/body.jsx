@@ -68,7 +68,7 @@ function Carousel() {
               </div>
               <div className={styles.flipCardBack}>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
-                <p className={styles.cardDescription}>{card.backText}</p>
+                <div className={styles.cardDescription}>{card.backText}</div>
               </div>
             </div>
           </div>
