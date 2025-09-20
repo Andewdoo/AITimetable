@@ -8,6 +8,7 @@ import Landing from './Landing.jsx';
 import CalendarApp from './CalendarApp.jsx';
 import LoginPage from './login.jsx';
 import SignupPage from './SignupPage.jsx';
+import HOME from './home.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/calendar" element={<CalendarApp />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/home" element={<HOME/>} />
       </Routes>
     </Router>
   );
