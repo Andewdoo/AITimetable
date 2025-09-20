@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import styles from './top-bar.module.css';
 import { useNavigate } from 'react-router-dom';
-import LoginPage from './login.jsx';
-
 
 function TopBar() {
   const navigate = useNavigate();
@@ -37,7 +35,8 @@ function TopBar() {
       <button className={styles.menuButton}
        onClick={() => navigate('/login')}>Login
        </button>
-      <button className={styles.menuButton}>Sign Up</button>
+      <button className={styles.menuButton} onClick={() => navigate('/signup')}>Sign Up
+      </button>
       <button className={styles.menuButton}>Contact</button>
     </div>
     <button className={styles.closeButton} onClick={toggleMenu}>Close</button>
