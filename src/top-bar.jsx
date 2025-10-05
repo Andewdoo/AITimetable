@@ -17,9 +17,7 @@ function TopBar() {
           <span className={styles.brandName}>Smart Table</span>
         </div>
         <div className={styles.topbarRight}>
-          <a href='/login.html'>
-          <button className={styles.loginButton}>Login</button>
-          </a>
+          <button className={styles.loginButton} onClick={() => navigate('/login')}>Login</button>
           <button className={styles.iconButton} onClick={toggleMenu}>
             <img src="/app.png" alt="menu" className={styles.icon} />
           </button>
@@ -29,9 +27,7 @@ function TopBar() {
   <div className={styles.panelContent}>
     <h1>Menu</h1>
     <div className={styles.menuButtons}>
-      <a href={'/why-smart-table.html'}>
-      <button className={styles.menuButton}>Why Smart Table?</button>
-      </a>
+      <button className={styles.menuButton} onClick={() => navigate('/why')}>Why Smart Table?</button>
       <button className={styles.menuButton}
        onClick={() => navigate('/login')}>Login
        </button>

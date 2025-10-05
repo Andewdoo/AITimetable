@@ -10,6 +10,14 @@ const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 
 function CalendarApp() {
+  
+  const handleEventResize = ({ event, start, end }) => {
+  const updatedEvent = { ...event, start, end };
+  setEvents(prev =>
+    prev.map(e => (e.id === event.id ? updatedEvent : e))
+  );
+};
+
   const [events, setEvents] = useState(() => {
     const saved = localStorage.getItem('calendar-events');
     return saved ? JSON.parse(saved) : [];
@@ -47,6 +55,7 @@ function CalendarApp() {
         events={events}
         onEventDrop={handleEventDrop}
         onSelectSlot={handleSelectSlot}
+        onEventResize={handleEventResize}
         selectable
         resizable
         defaultView="week"
