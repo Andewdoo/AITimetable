@@ -33,7 +33,7 @@ function TopBar() {
        </button>
       <button className={styles.menuButton} onClick={() => navigate('/signup')}>Sign Up
       </button>
-      <button className={styles.menuButton}>Contact</button>
+      <button className={styles.menuButton} onClick={() => navigate('/contact')}>Contact</button>
       <button className={styles.menuButton} onClick={() => navigate('/home')}>Home
       </button>
     </div>

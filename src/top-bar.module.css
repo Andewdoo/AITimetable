@@ -47,16 +47,23 @@
   background-color: black;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 8px 20px;
   font-family: 'Italiana', serif;
   cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 .icon {
   width: 40px;
   height: auto;
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  padding: 0px;
   background-color: transparent;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-bottom: -5px;
+  padding-right: 10px;
 }
 
 .topbar {
@@ -84,8 +91,8 @@
 }
 
 .topbarRight {
-  gap: 20px;
-  padding: 10px;
+  gap: 12px;
+
 }
 
 .brandName {
