@@ -17,7 +17,7 @@ function Landing() {
           Let AI plan your week smarter, faster, and stress-free.
         </h2>
         <a>
-        <button className={styles.getStartedButton} onClick={() => navigate('/calendar')}>Get Started</button>
+        <button className={styles.getStartedButton} onClick={() => navigate('/CalendarPage')}>Get Started</button>
         </a>
       </div>
 

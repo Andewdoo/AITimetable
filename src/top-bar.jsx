@@ -27,6 +27,7 @@ function TopBar() {
   <div className={styles.panelContent}>
     <h1>Menu</h1>
     <div className={styles.menuButtons}>
+      <button className={styles.menuButton} onClick={() => navigate('/CalendarPage')}>Calendar</button>
       <button className={styles.menuButton} onClick={() => navigate('/why')}>Why Smart Table?</button>
       <button className={styles.menuButton}
        onClick={() => navigate('/login')}>Login

@@ -11,6 +11,7 @@ import SignupPage from './SignupPage.jsx';
 import HOME from './home.jsx';
 import WhySmartTable from './why.jsx';
 import ContactPage from './contact.jsx';
+import CalendarPage from './Calendarpage.jsx';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <Carousel />
           </>
         } />
-        <Route path="/calendar" element={<CalendarApp />} />
+        <Route path="/Calendarpage" element={<CalendarPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/home" element={<HOME/>} />

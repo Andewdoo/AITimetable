@@ -1,0 +1,373 @@
+/* Sidebar Layout */
+.sidebar {
+  position: relative;
+  width: 300px;
+  padding: 16px;
+  margin-top: 90px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  transition: width 220ms ease, padding 220ms ease;
+}
+
+.sidebar.closed {
+  width: 44px;
+  padding: 8px 6px;
+}
+
+.sidebar-content {
+  display: block;
+}
+
+.sidebar.closed .sidebar-content {
+  display: none;
+}
+
+/* Toggle Button — vertically rectangular, black arrow, centered */
+.sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 60px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #000;
+  z-index: 60;
+}
+
+.sidebar-toggle:hover {
+  transform: translateY(-50%) translateY(-2px);
+}
+
+.sidebar-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(49, 116, 173, 0.12);
+}
+
+@media (max-width: 520px) {
+  .sidebar-toggle {
+    right: -16px;
+  }
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px; /* reduced gap */
+}
+
+.logo {
+  color: #000;
+}
+
+.calendar-icon {
+  font-size: 20px;
+}
+
+/* Month Navigation */
+.month-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px; /* reduced gap */
+}
+
+.month-nav button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.month-nav span {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px; /* slightly tighter */
+  margin-bottom: 8px;
+  transition: opacity 300ms ease, transform 300ms ease;
+  will-change: opacity, transform;
+}
+
+.calendar-day {
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+  font-size: 12px;
+}
+
+.calendar-date {
+  min-height: 44px;
+  padding: 6px;
+  border-radius: 6px;
+  color: #000;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.date-number {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.selected-date {
+  background-color: #3174ad;
+  color: white;
+}
+
+.weekend {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.holiday {
+  background: rgba(255, 235, 59, 0.15);
+}
+
+.holiday .date-number {
+  color: #000;
+}
+
+.holiday-dot {
+  width: 6px;
+  height: 6px;
+  background: #f44336;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+/* Events preview */
+.events-preview {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.event-pill {
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.event-pill.small {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.more-events {
+  font-size: 11px;
+  color: #666;
+  margin-left: 2px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #000;
+}
+
+/* My Calendar Section */
+.my-calendar h4 {
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 14px;
+}
+
+.calendar-account-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.calendar-account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease;
+  position: relative;
+}
+
+.calendar-account.active {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.account-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.delete-icon {
+  font-size: 12px;
+  margin-left: 8px;
+  color: #f44336;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+/* Add Calendar Button */
+.add-calendar {
+  background: none;
+  border: none;
+  color: #3174ad;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Color Picker */
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-swatch.selected {
+  border-color: #000;
+}
+
+/* Color classes */
+.color-swatch.red, .calendar-account.red { background-color: #e57373; }
+.color-swatch.yellow, .calendar-account.yellow { background-color: #fdd835; color: #000; }
+.color-swatch.green, .calendar-account.green { background-color: #81c784; }
+.color-swatch.blue, .calendar-account.blue { background-color: #64b5f6; }
+.color-swatch.purple, .calendar-account.purple { background-color: #ba68c8; }
+.color-swatch.orange, .calendar-account.orange { background-color: #ffb74d; color: #000; }
+.color-swatch.teal, .calendar-account.teal { background-color: #4db6ac; }
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 50;
+}
+
+.modal {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  width: 320px;
+  max-height: 80vh;
+  overflow: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+  margin-top: 0;
+}
+
+.modal-sub {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Event list */
+.events-list {
+  margin-top: 12px;
+}
+
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.remove-event {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+}
+
+.no-events {
+  color: #666;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 380px) {
+  .sidebar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+  }
+}
